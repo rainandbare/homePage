@@ -1,0 +1,24 @@
+section.hero{
+	background-image: url(./images/holdingHands_laurentPeignault.jpg);
+	background-size: cover;
+	background-position: center center;
+	height: 80vh;
+	padding: 20px;
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0,114,176,0.7);
+
+	}
+	.hero_content{
+		position: relative;
+		z-index: 1;
+		width: 50%;
+	}
+}

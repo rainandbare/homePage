@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>DateNight Babysitting - Toronto&#039;s Leading App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="description"  content="The DateNight Babysitting App Connects Parents with Experienced Babysitters in Toronto and Ottawa. Many happy parents have booked thousands of dates!" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="https://www.weneeddatenight.com/wp-content/uploads/2016/06/cropped-Datenight_app_icon_512X512-32x32.png" sizes="32x32" />
+</head>
+<body>
+  <main>
+    <header class="flex">
+      <div class="logo"><img src="https://www.weneeddatenight.com/wp-content/uploads/2016/06/318x72_logo.png" width="318" height="72" alt="Datenight Babysitting"/></div>
+      <div class="babysitterLogin flex">
+        <h5>Are you a babysitter?<h5>
+        <a class='btn rounded' href="https://www.weneeddatenight.com/babysitter-login-page/">Sign Up</a>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero_content">
+        <h2>We Need DateNight.</h2>
+        <h3>Connecting Parents with experianced local babysitters.</h3>
+        <div class="callToAction">
+          <button class='btn important'>Find Babysitters</button>
+          <button class='btn primary'>Invest In Datenight</button>
+        </div>
+      </div>
+    </section>
+    <section class="checkForBabysitters">
+      <section class="actionBox">
+        <h2>Check for babysitters near you.</h2>
+        <h3></h3>
+        <form>
+          <label for="postal-code">Postal Code</label>
+          <input type="text" id="postal-code" name="postal-code">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <button class='btn primary inverse' id="test-ajax">Check for babysitters</button>
+        <form>
+        <a href="https://itunes.apple.com/us/app/datenight./id869891404?mt=8">
+          <img src="./images/appleStore.svg">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.datenight&hl=en">
+          <img src="./images/google-play-badge.png">
+        </a>
+      </section>
+      <section class='availableBabysitters'>
+        <div id="babysitter-result"></div>
+      </section>
+    </section>
+    <section class="dragonsDen">
+      <h2>Get in on a company that pitched on the Den!</h2>
+      <h3>Support Datenight’s growth with an investment between $250 and $25,000</h3>
+      <a href="" class="bigDoubleChevrons"></a>
+    </section>
+    <footer>
+      <h5>Want to partner?</h5>
+      <a class='btn primary'>Contact Us</a>
+      <ul class="footer-menu">
+        <li>Footerlink</li>
+        <li>Footerlink</li>
+        <li>Footerlink</li>
+        <li>Footerlink</li>
+        <li>Footerlink</li>
+        <li>Footerlink</li>
+      </ul>
+    </footer>
+  </main>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="scripts/scripts.js"></script>
+     <script>
+    $(function() {
+     $('#test-ajax').on('click', function(){
+          const postal = $('#postal-code').val();
+          const email = $('#email').val();
+          $.ajax({
+                  type: "GET",
+                  url: "ajaxTrial.php",
+                  data: {action: "babysitter_check", postalCode: postal, email: email},
+                  success: function(data) {
+                          //console.log(data);
+                          //here we will do something with the data that we get back from ajaxTrial.php
+                          $('#babysitter-result').text(data);
+                          //$('#captured-info').append("<li>"+ postal + "</li>", "<li>"+ email + "</li>");
+                      }
+                  });
+          });
+    });
+  </script>
+</body>
+</html>

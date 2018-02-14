@@ -1,0 +1,60 @@
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/16) * 1rem;
+}
+html{
+    @include fontSize(15);
+}
+body{
+	color: $black;
+	font-family: $sans;
+	font-weight: 300;
+}
+h2{
+	@include fontSize(85);
+	color: $white;
+	font-weight: 700;
+}
+
+h3{
+	@include fontSize(45);
+	color: $white;
+	font-weight: 300;
+}
+
+h5{
+	@include fontSize(12);
+	font-weight: 300;
+}
+
+p{
+	@include fontSize(18);
+}
+
+.btn{
+	border: none;
+	border-radius: 0;
+	background: $main;
+	color: $white;
+	padding: 20px;
+	text-transform: uppercase;
+	min-width: 200px;
+	letter-spacing: 1px;
+}
+
+.btn.important{
+	background: $accent;
+}
+
+.btn.inverse{
+	background: $white;
+	border: 4px solid $main;
+	color: $main;
+}
+
+.btn.rounded{
+	background: $secondary;
+	border-radius: 50px;
+    padding: 10px 25px;
+	@include fontSize(12);
+}
