@@ -1,0 +1,48 @@
+.checkForBabysitters{
+	background: url('./images/iphoneApp.png');
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+	position: relative;
+	height: 600px;
+}
+section.actionBox{
+	background: $secondary;
+    position: absolute;
+    right: 10%;
+    top: -40px;
+    bottom: -40px;
+    width: 440px;
+    padding: 55px;
+	h2{
+		@include fontSize(45);
+	}
+	form{
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	label{
+		visibility: hidden;
+		opacity: 0;
+	}
+	input{
+		background: 0 0;
+	    border: none;
+	    border-bottom: $white 3px solid;
+	    padding: 15px 3px;
+	    margin: 0 0 10px 0;
+	    color: white;
+	    transition: all 0.2s ease;
+		&:focus{
+			outline: none;
+			border-bottom: $main $lineThickness solid;
+		}
+	}
+	.appleSVG{
+		margin: 11px 11px 0 11px;
+	}
+	.downloadImage{
+		width: 180px;
+		display: block;
+		margin-left: -11px;
+	}
+}

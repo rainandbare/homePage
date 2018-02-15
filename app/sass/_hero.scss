@@ -3,6 +3,7 @@ section.hero{
 	background-size: cover;
 	background-position: center center;
 	height: 80vh;
+	min-height: 500px;
 	padding: 20px;
 	position: relative;
 	&:before{
@@ -17,8 +18,22 @@ section.hero{
 
 	}
 	.hero_content{
-		position: relative;
-		z-index: 1;
-		width: 50%;
+		position: absolute;
+	    z-index: 1;
+	    width: 70%;
+	    top: 0;
+	    bottom: 0;
+	    display: flex;
+	    flex-flow: column nowrap;
+	    justify-content: center;
+	    h3{
+	    	padding-bottom: 20px;
+	    	padding-right: 150px;
+	    }
+	    button{
+	    	@include fontSize(18);
+	    	margin-right: 30px;
+	    }
 	}
 }
+

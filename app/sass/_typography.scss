@@ -35,26 +35,40 @@ p{
 	border: none;
 	border-radius: 0;
 	background: $main;
+	border: $lineThickness solid $main;
 	color: $white;
 	padding: 20px;
 	text-transform: uppercase;
 	min-width: 200px;
 	letter-spacing: 1px;
+	transition: all 0.2s ease;
 }
 
 .btn.important{
 	background: $accent;
+	border: $lineThickness solid $accent;
 }
 
 .btn.inverse{
 	background: $white;
-	border: 4px solid $main;
 	color: $main;
 }
 
 .btn.rounded{
 	background: $secondary;
 	border-radius: 50px;
-    padding: 10px 25px;
+    padding: 7px 18px;
+    min-width: initial;
 	@include fontSize(12);
+	border: none;
+}
+
+.btn:hover{
+	background: $white;
+	border: $lineThickness solid $main;
+	color: $main;
+}
+.btn.inverse:hover{
+	background: $main;
+	color: $white;
 }

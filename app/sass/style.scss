@@ -11,7 +11,7 @@
 }
 
 @include placeholder {
-    color: black;
+    color: white;
     font-weight: 300;
 }
 
@@ -21,7 +21,6 @@
 }
 ::-moz-selection {
   background: $lightGrey; /* Gecko Browsers */
-
 }
 
 .flex{
@@ -30,5 +29,9 @@
   align-items: stretch;
 }
 
+@import 'header';
 @import 'hero';
+@import 'actionBox';
+@import 'dragonsDen';
+@import 'footer';
 @import 'mediaQueries';

@@ -1,0 +1,26 @@
+section.dragonsDen{
+	background: $lightGrey;
+	padding: 100px 40px 80px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	h2, h3{
+		color: $black;
+	}
+	h2{
+		@include fontSize(45);
+	}
+	h3{
+		@include fontSize(24);
+		padding: 30px 150px 30px 0;
+
+	}
+	.dragonsDen_content{
+		width: 60%;
+		padding-right: 40px;
+	}
+	.bigDoubleChevrons{
+		width: 40%;
+		display: block;
+	}
+}
